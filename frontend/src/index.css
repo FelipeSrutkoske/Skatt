@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #dee2e6;
+    color: #212529;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.45;
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    min-height: 100%;
+    background: transparent;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-sidebar {
+  background: rgba(248, 249, 250, 0.68);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-panel {
+  background: rgba(248, 249, 250, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  box-shadow:
+    0 8px 24px -18px rgba(33, 37, 41, 0.25),
+    0 0 0 1px rgba(173, 181, 189, 0.35);
+}
+
+.glass-card {
+  background: rgba(248, 249, 250, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 8px 20px -16px rgba(33, 37, 41, 0.24),
+    0 0 0 1px rgba(173, 181, 189, 0.35);
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.glass-card:hover {
+  background: rgba(248, 249, 250, 0.88);
+  box-shadow:
+    0 12px 26px -16px rgba(33, 37, 41, 0.3),
+    0 0 0 1px rgba(108, 117, 125, 0.45);
+}
+
+.glass-switch {
+  background: rgba(222, 226, 230, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(173, 181, 189, 0.65);
+}
+
+.glass-fab {
+  background: rgba(248, 249, 250, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(173, 181, 189, 0.85);
+  box-shadow: 0 10px 24px -12px rgba(33, 37, 41, 0.35);
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #212529;
+  }
+
+  .no-print,
+  header,
+  aside,
+  nav,
+  canvas {
+    display: none !important;
+  }
+
+  .glass-panel,
+  .glass-card {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    border-color: #dee2e6 !important;
+    box-shadow: none !important;
+  }
+
+  main {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}

@@ -1,0 +1,15 @@
+.git
+.gitignore
+data/
+docs/
+frontend/node_modules/
+frontend/dist/
+internal/web/dist/*
+!internal/web/dist/.gitkeep
+finance
+finance-server
+*.db
+*.db-shm
+*.db-wal
+.env
+.env.*
